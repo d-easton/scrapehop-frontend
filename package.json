@@ -4,7 +4,10 @@
   "description": "Gathering what's new in hiphop, to make KWUR work a little easier",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . ",
+    "build": "webpack",
+    "watch": "webpack-dev-server --inline --hot"
   },
   "repository": {
     "type": "git",
