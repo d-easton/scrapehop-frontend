@@ -3,6 +3,7 @@ import './app.css';
 
 import SpotifyDash from '../spotify_dash/index';
 import SourceBar from '../source_bar/index';
+import TrackTable from '../track_table/index';
 
 class App extends Component {
   constructor(props) {
@@ -31,6 +32,7 @@ class App extends Component {
       <div className="AppBody">
           <SourceBar />
           <SpotifyDash user="david"/>
+          <TrackTable />
       </div>
     </div>
     );
