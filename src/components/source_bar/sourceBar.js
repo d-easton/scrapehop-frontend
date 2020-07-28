@@ -11,7 +11,7 @@ const SourceBar = props => {
     return (
         <div className="SourceList">
             <ul>
-                <li> <SourceButton assetPath={pitchfork}/></li>
+                <li> <SourceButton assetPath={pitchfork} onClickAlbumScrapes={props.onClickAlbumScrapes} /></li>
                 <li> <SourceButton assetPath={spotify}/></li>
             </ul>
         </div> 

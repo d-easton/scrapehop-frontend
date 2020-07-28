@@ -18,12 +18,22 @@ class App extends Component {
         .then(res => this.setState({ apiResponse: res }));
   }
 
+  callRapAlbumScrapes = () => {
+    fetch("http://localhost:8888/scraping/albums")
+        .then(res => res.text())
+        .then(res => console.log(res));
+  }
+
   // componentWillMount = () => {
   //   this.callAPI();
   // }
 
   handleLogin() {
     this.callLogin();
+  }
+
+  handleRapAlbumScrapes() {
+    this.callRapAlbumScrapes();
   }
 
   render = () => {
@@ -38,7 +48,7 @@ class App extends Component {
         </div>
       </header>
       <div className="AppBody">
-          <SourceBar />
+          <SourceBar onClickAlbumScrapes = {rapAlbums => this.handleRapAlbumScrapes()}/>
           <SpotifyDash user="david"/>
           <TrackTable />
       </div>
