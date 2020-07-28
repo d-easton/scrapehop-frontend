@@ -1,7 +1,13 @@
 
-.NavBar ul li {
+.ControlBar ul li {
     display: inline-block;
     *display: inline;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-right: 40px;
+}
+
+.ControlBar {
+    background-color:#ffffff;
+    padding: 10px;
+    height: 70px;
+    border-radius: 25px;
 }

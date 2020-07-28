@@ -12,14 +12,18 @@ class App extends Component {
       this.state = { currentUser: "" };
   }
 
-  callAPI = () => {
+  callLogin = () => {
     fetch("http://localhost:8888/login")
         .then(res => res.text())
         .then(res => this.setState({ apiResponse: res }));
   }
 
-  componentWillMount = () => {
-    this.callAPI();
+  // componentWillMount = () => {
+  //   this.callAPI();
+  // }
+
+  handleLogin() {
+    this.callLogin();
   }
 
   render = () => {
@@ -27,8 +31,10 @@ class App extends Component {
     <div className="App">
       <header className="AppHeader">
         <div className="Container">
-          <div className="TitleWrapper">  <h1> Scrapehop app </h1>    </div>
-          <div className="NavWrapper">    <NavBar />                  </div>
+          <div className="TitleWrapper">  <h1> Scrapehop </h1>  </div>
+          <div className="NavWrapper">    
+            <NavBar onClickLogin = {login => this.handleLogin()} /> 
+          </div>
         </div>
       </header>
       <div className="AppBody">
