@@ -4,6 +4,7 @@ import './app.css';
 import SpotifyDash from '../spotify_dash/index';
 import SourceBar from '../source_bar/index';
 import TrackTable from '../track_table/index';
+import NavBar from '../nav_bar/index';
 
 class App extends Component {
   constructor(props) {
@@ -25,9 +26,10 @@ class App extends Component {
     return(
     <div className="App">
       <header className="AppHeader">
-        <h1>
-            Scrapehop app
-        </h1>
+        <div className="Container">
+          <div className="TitleWrapper">  <h1> Scrapehop app </h1>    </div>
+          <div className="NavWrapper">    <NavBar />                  </div>
+        </div>
       </header>
       <div className="AppBody">
           <SourceBar />

@@ -12,8 +12,14 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.Container {
+ padding: 20px;
+ width: 95%;
+}
 
-#title {
-  align-items: left;
-  justify-content: left;
+.TitleWrapper {
+  float: left;
+}
+.NavWrapper {
+  float: right;
 }
